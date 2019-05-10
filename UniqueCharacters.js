@@ -1,9 +1,5 @@
 // Given string (random phrase or whatever). Return another string with only unique characters.
 
-const checkIfCharactersEqual = (a,b)=>{
-    return a === b;
-}
-
 const findUniqueChars = (word) =>{
     const arrFromWord = word.split('');
     let unique = [];
