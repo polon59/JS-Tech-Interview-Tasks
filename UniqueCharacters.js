@@ -19,4 +19,4 @@ const findUniqueChars = (word) =>{
     return unique;
 }
 
-console.log(findUniqueChars("abcdedeaaf"));
+console.log(findUniqueChars("abcdabcde"));
