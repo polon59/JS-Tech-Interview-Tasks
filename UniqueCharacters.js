@@ -6,10 +6,13 @@ const findUniqueChars = (word) =>{
     const arrFromWord = word.split('');
     let uniqueCharacters = [];
     let letterIsUnique;
+    let iterations = 0;
 
     arrFromWord.forEach((letter)=>{
         letterIsUnique = true;
+        
         for (let i = 0; i < uniqueCharacters.length; i++) {
+            iterations ++;
             if (letter === uniqueCharacters[i]) {
                 letterIsUnique = false;
                 break;
@@ -19,6 +22,7 @@ const findUniqueChars = (word) =>{
             uniqueCharacters.push(letter);
         }
     })
+    console.log("IterationsCount" + iterations);
     return uniqueCharacters;
 }
 
