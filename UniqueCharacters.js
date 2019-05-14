@@ -5,20 +5,22 @@ const {performance} = require('perf_hooks');
 const findUniqueChars = (word) =>{
     const arrFromWord = word.split('');
     let uniqueCharacters = [];
+    let letterIsUnique;
+
     arrFromWord.forEach((letter)=>{
-        let isLetterInList = false;
-        uniqueCharacters.forEach((uniqueChar)=>{
-            if (letter === uniqueChar) {
-                isLetterInList = true;
+        letterIsUnique = true;
+        for (let i = 0; i < uniqueCharacters.length; i++) {
+            if (letter === uniqueCharacters[i]) {
+                letterIsUnique = false;
+                break;
             }
-        })
-        if (!isLetterInList) {
+        }
+        if (letterIsUnique) {
             uniqueCharacters.push(letter);
         }
     })
     return uniqueCharacters;
 }
-
 
 const startTime = performance.now();
 const result = findUniqueChars("piniendzy ni ma bo jest zima");
