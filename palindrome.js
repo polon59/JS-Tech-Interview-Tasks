@@ -5,7 +5,6 @@ const isPalindrome = (word) =>{
     let isPalindrome = true;
 
     while (backIndex > 0) {
-        console.log(`front=${frontIndex}, back=${backIndex} /// ${word[frontIndex]} === ${word[backIndex]}`)        
         if (word[frontIndex] !== word[backIndex]){
             isPalindrome = false;
             break;
