@@ -1,10 +1,11 @@
 const isPalindrome = (word) =>{
     let wordLength = word.length;
-    let frontIndex = wordLength;
-    let backIndex = 0;
+    let backIndex = wordLength-1;
+    let frontIndex = 0;
     let isPalindrome = true;
 
-    while (frontIndex > 0) {
+    while (backIndex > 0) {
+        console.log(`front=${frontIndex}, back=${backIndex} /// ${word[frontIndex]} === ${word[backIndex]}`)        
         if (word[frontIndex] !== word[backIndex]){
             isPalindrome = false;
             break;
@@ -16,3 +17,5 @@ const isPalindrome = (word) =>{
     return isPalindrome;
 }
 
+const word = "aabbcbbaa";
+isPalindrome(word) ? console.log("YES") : console.log("NO");
