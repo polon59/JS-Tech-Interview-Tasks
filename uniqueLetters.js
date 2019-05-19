@@ -2,9 +2,10 @@ const findUnique = (text) =>{
 
     let word = text.split("");
     let uniqueCharacters = [];
+    let characterCounter;
 
     word.forEach(character => {
-        let characterCounter = 0;
+        characterCounter = 0;
 
         word.forEach(nextChar => {
             if (nextChar === character){
