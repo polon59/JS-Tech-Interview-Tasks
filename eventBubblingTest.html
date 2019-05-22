@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Event bubbling</title>
+        <style>
+            .child{
+                width: 100px;
+                height: 100px;
+                background-color: green;
+                margin: 30px;
+                display: inline-block;
+                z-index: 0;
+            }
+            #parent{
+                width: 500px;
+                background-color: yellow;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="parent" onclick="handleParentEvent()">
+            <div class="child" onclick="handleChildEvent()">1</div>
+            <div class="child" onclick="handleChildEvent()">2</div>
+            <div class="child" onclick="handleChildEvent()">3</div>
+        </div>
+
+        <script>
+            function handleParentEvent() {
+                alert('parent event')
+            }
+
+            function handleChildEvent(params) {
+                alert("child event")
+            }
+        </script>
+    </body>
+</html>
