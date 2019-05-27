@@ -2,7 +2,7 @@
 
 const add = (a,b) =>{
 
-    if (a == undefined|| b == undefined){
+    if (b == undefined){
         return (b)=>{
             return a+b;
         }
