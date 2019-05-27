@@ -41,13 +41,16 @@ class App extends Component{
       </div>
       )
     }
-    console.log(currentUser.picture)
+
+    const {name,picture} = currentUser.results[0];
+
     return(
       <div className="App">
         <p>
           {JSON.stringify(currentUser)}
         </p>
-        <img src={currentUser.picture} alt="image"/>
+        <h4>{`Name : ${name.title} ${name.first} ${name.last}`}</h4>
+        <img src={picture.large} alt="image"/>
       </div>
     )
   }
