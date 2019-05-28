@@ -22,27 +22,30 @@ class App extends Component{
   }
 
 
-
   componentDidMount(){
-    this.fetchNewUserData();
+    setTimeout(this.fetchNewUserData, 2000);
   }
 
+
+  renderLoadingInfo = () =>{
+    return(
+      <div className="App">
+      <p>
+        loading data...
+      </p>
+    </div>
+    )
+  }
 
 
   render(){
     const {currentUser} = this.state;
     
     if (!currentUser) {
-      return(
-        <div className="App">
-        <p>
-          loading data...
-        </p>
-      </div>
-      )
+      return this.renderLoadingInfo();
     }
 
-    const {name,picture,location} = currentUser.results[0];
+    const {name,picture,location,dob} = currentUser.results[0];
 
     return(
       <div className="App">
@@ -51,7 +54,8 @@ class App extends Component{
         </p>
         <h4>{`NAME : ${name.title} ${name.first} ${name.last}`}</h4>
         <h4>{`LOCATION : State ${location.state}, ${location.city} City, ${location.street}`}</h4>
-        
+        <h4>{`AGE : ${dob.age}`}</h4>
+
         <img src={picture.large} alt="image"/>
         <button onClick={this.fetchNewUserData}>Find new user</button>
       </div>
