@@ -56,7 +56,7 @@ class App extends Component{
         <h4>{`LOCATION : State ${location.state}, ${location.city} City, ${location.street}`}</h4>
         <h4>{`AGE : ${dob.age}`}</h4>
 
-        <img src={picture.large} alt="image"/>
+        <img src={picture.large} alt="user photo"/>
         <button onClick={this.fetchNewUserData}>Find new user</button>
       </div>
     )
