@@ -1,7 +1,11 @@
 import React from 'react'
 
 const LoadingComponent = (props) =>{
-    return({
-        
-    })
+    return(
+        <div className="App">
+        <p>
+            loading data...
+        </p>
+        </div>
+    )
 }
