@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import LoadingComponent from './LoadingComponent';
 
 import './App.css';
 
