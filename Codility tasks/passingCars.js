@@ -13,15 +13,6 @@ function solution(A) {
         }
     }
 
-
-    // A.forEach(element => {
-    //     element === 0 ? eastCount++ : pairs += eastCount;
-    //     if (pairs > 1000000000) {
-    //         console.log('dupa')
-    //         return -1;
-    //     }
-    // });
-
     return pairs;
 }
 
