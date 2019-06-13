@@ -8,7 +8,7 @@
 
 
 function solution(A, K) {
-    let shifts = K%A.length;
+    let shifts = K % A.length;
 
     if (shifts === 0 || A.length < 2) {
         return A;
